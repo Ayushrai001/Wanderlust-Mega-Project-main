@@ -1,6 +1,7 @@
+
 resource "aws_key_pair" "deployer" {
   key_name   = "terra-automate-key"
-  public_key = file("C:\Users\Ayush RAi\Desktop\Assignment project\Wanderlust-Mega-Project-main\terraform")
+  public_key = file("/home/ubuntu/Wanderlust-Mega-Project-main/terraform/terra-key.pub")
 }
 
 resource "aws_default_vpc" "default" {
@@ -61,3 +62,4 @@ resource "aws_instance" "testinstance" {
     volume_type = "gp3"
   }
 }
+
