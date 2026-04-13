@@ -19,7 +19,7 @@ pipeline {
         stage('Git: Code Checkout') {
             steps {
                 script{
-                    code_checkout("https://github.com/LondheShubham153/Wanderlust-Mega-Project.git","main")
+                    code_checkout("https://github.com/Ayushrai001/Wanderlust-Mega-Project-main.git","main")
                 }
             }
         }
@@ -68,7 +68,7 @@ pipeline {
                         git commit -m "Updated environment variables"
                         
                         echo "Pushing changes to github: "
-                        git push https://github.com/LondheShubham153/Wanderlust-Mega-Project.git main
+                        git push https://github.com/Ayushrai001/Wanderlust-Mega-Project-main.gitt main
                     '''
                     }
                 }
@@ -79,7 +79,7 @@ pipeline {
         success {
             script {
                 emailext attachLog: true,
-                from: 'trainwithshubham@gmail.com',
+                from: 'raiayush021@gmail.com',
                 subject: "Wanderlust Application has been updated and deployed - '${currentBuild.result}'",
                 body: """
                     <html>
@@ -96,14 +96,14 @@ pipeline {
                     </body>
                     </html>
             """,
-            to: 'trainwithshubham@gmail.com',
+            to: 'raiayush021@gmail.com',
             mimeType: 'text/html'
             }
         }
       failure {
             script {
                 emailext attachLog: true,
-                from: 'trainwithshubham@gmail.com',
+                from: 'raiayush021@gmail.com',
                 subject: "Wanderlust Application build failed - '${currentBuild.result}'",
                 body: """
                     <html>
@@ -117,9 +117,10 @@ pipeline {
                     </body>
                     </html>
             """,
-            to: 'trainwithshubham@gmail.com',
+            to: 'raiayush021@gmail.com',
             mimeType: 'text/html'
             }
         }
     }
 }
+                    
