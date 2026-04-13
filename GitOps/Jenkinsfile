@@ -68,7 +68,7 @@ pipeline {
                         git commit -m "Updated environment variables"
                         
                         echo "Pushing changes to github: "
-                        git push https://github.com/Ayushrai001/Wanderlust-Mega-Project-main.gitt main
+                        git push https://github.com/Ayushrai001/Wanderlust-Mega-Project-main.git main
                     '''
                     }
                 }
