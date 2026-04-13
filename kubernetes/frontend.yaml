@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: ayushrai0001/wanderlust-frontend-beta:v1
+          image: ayushrai0001/wanderlust-frontend-beta:v2.1
           ports:
             - containerPort: 5173
 ---
@@ -35,4 +35,3 @@ spec:
     - port: 5173
       targetPort: 5173
       protocol: TCP
-      nodePort: 31000

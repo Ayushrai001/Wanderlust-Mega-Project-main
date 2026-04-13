@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: ayushrai0001/wanderlust-backend-beta:v1
+          image: ayushrai0001/wanderlust-backend-beta:v2.1
           ports:
             - containerPort: 8080
 ---
@@ -34,3 +34,7 @@ spec:
   ports:
     - port: 8080
       targetPort: 8080
+<<<<<<< HEAD
+=======
+      protocol: TCP
+>>>>>>> 0db3124 (Fix frontend and backend image versions and config)
